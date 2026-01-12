@@ -232,15 +232,21 @@ input:not(.plyr *) {
 	input[type="submit"] {
 		margin: auto;
 	}
-	.submit-button {
-		text-align: center !important;
+	:not(.submit-block) > .submit-button {
 		padding-left: 3%;
 		width: 100%;
+	}
+	.submit-button {
+		text-align: center !important;
 		.btn {
 			padding: 15px 20px;
 			display: inline-block;
 			font-size: 1.3rem;
 		}
+	}
+	.submit-block > .submit-button {
+		margin-top: 0;
+		margin-bottom: 0;
 	}
 	form .wpcf7-response-output {
 		border-width: 0px 0px 0px 4px !important;
@@ -261,6 +267,13 @@ input:not(.plyr *) {
 		letter-spacing: 2px;
 		line-height: 1.4;
 		font-size: 0.9rem;
+	}
+	/* contact form now with Turnstile TM */
+	.submit-block {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: flex-start;
 	}
 }
 .select2-dropdown {

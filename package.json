@@ -1,14 +1,14 @@
 {
   "name": "rocks",
   "version": "1.0.0",
-  "description": "the website of Rocks",
+  "description": "rocks what glow",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/davidpurnell/aatom.git"
+    "url": "git+https://github.com/davidpurnell/azuv.git"
   },
   "main": "main.js",
   "scripts": {
-    "build": "wp-scripts build",
+	 "build": "wp-scripts build",
     "check-engines": "wp-scripts check-engines",
     "check-licenses": "wp-scripts check-licenses",
     "format": "wp-scripts format",
@@ -23,14 +23,18 @@
     "test:unit": "wp-scripts test-unit-js"
   },
   "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
+   "> 1%",
+   "last 2 versions"
+ ],
   "keywords": [],
   "author": "David Purnell <dave@purnell.io>",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidpurnell/azuv/issues"
+  },
+  "homepage": "https://github.com/davidpurnell/azuv#readme",
   "devDependencies": {
-    "@wordpress/scripts": "^24.0.0"
+    "@wordpress/scripts": "^31.2.0"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",

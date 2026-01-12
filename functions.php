@@ -2,26 +2,26 @@
 /* enqueue scripts and style from parent theme */
 function twentytwenttwo_styles()
 {
-    wp_enqueue_style(
-        'child-style',
-        get_stylesheet_uri(),
-        array('twenty-twenty-two-style'),
-        wp_get_theme()->get('Version')
-    );
+	wp_enqueue_style(
+		'child-style',
+		get_stylesheet_uri(),
+		array('twenty-twenty-two-style'),
+		wp_get_theme()->get('Version')
+	);
 }
 /* enqueue scripts and style from child theme */
 function rocks_styles()
 {
-    wp_enqueue_style('rocks-custom-style', get_stylesheet_directory_uri() . '/build/index.css',array(), '6.9.3');
-    wp_enqueue_style('rocks-theme-style', get_stylesheet_directory_uri() . '/style.css');
+	wp_enqueue_style('rocks-custom-style', get_stylesheet_directory_uri() . '/build/index.css', array(), '6.9.4');
+	wp_enqueue_style('rocks-theme-style', get_stylesheet_directory_uri() . '/style.css');
 
-    wp_enqueue_script(
-        'main',
-        get_stylesheet_directory_uri() . '/build/index.js',
-        array(),
-        false,
-        true
-    );
+	wp_enqueue_script(
+		'main',
+		get_stylesheet_directory_uri() . '/build/index.js',
+		array(),
+		false,
+		true
+	);
 }
 
 add_action('wp_enqueue_scripts', 'twentytwentytwo_styles');
@@ -30,8 +30,8 @@ add_action('wp_enqueue_scripts', 'rocks_styles');
 /* year shortcode for copyright */
 function current_year()
 {
-   $year = date('Y');
-   return $year;
+	$year = date('Y');
+	return $year;
 }
 add_shortcode('year', 'current_year');
 
@@ -41,28 +41,28 @@ add_shortcode('year', 'current_year');
 add_filter('woocommerce_breadcrumb_defaults', 'rocks_change_breadcrumb_delimiter');
 function rocks_change_breadcrumb_delimiter($defaults)
 {
-    $defaults['delimiter'] = "<span class='breadcrumbs__separator'></span>";
-    return $defaults;
+	$defaults['delimiter'] = "<span class='breadcrumbs__separator'></span>";
+	return $defaults;
 }
 // Add a "New" badge
 add_action('woocommerce_shop_loop_item_title', 'rocks_new_badge', 10);
 add_action('woocommerce_single_product_summary', 'rocks_new_badge', 7);
 function rocks_new_badge()
 {
-    global $product;
-    $newness_days = 30; // Newness in days 
-    $created = strtotime($product->get_date_created());
-    if ((time() - (60 * 60 * 24 * $newness_days)) < $created) {
-        echo '<span class="itsnew">' . esc_html__('NEW', 'woocommerce') . '</span>';
-    }
+	global $product;
+	$newness_days = 30; // Newness in days 
+	$created = strtotime($product->get_date_created());
+	if ((time() - (60 * 60 * 24 * $newness_days)) < $created) {
+		echo '<span class="itsnew">' . esc_html__('NEW', 'woocommerce') . '</span>';
+	}
 }
 /* customizing single product page */
 // Remove the reviews tab
 add_filter('woocommerce_product_tabs', 'rocks_remove_product_tabs', 98);
 function rocks_remove_product_tabs($tabs)
 {
-    unset($tabs['reviews']);
-    return $tabs;
+	unset($tabs['reviews']);
+	return $tabs;
 }
 // remove related products
 remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
@@ -72,13 +72,13 @@ remove_action('woocommerce_before_single_product_summary', 'woocommerce_show_pro
 add_action('woocommerce_single_product_summary', 'rocks_video_embed', 10);
 function rocks_video_embed()
 {
-    $the_video = get_field('video');
+	$the_video = get_field('video');
 
-    if ($the_video) {
-        echo "<div class=\"container\"><div class=\"plyr__video-embed\" id=\"player\">";
-        echo "<iframe src=\"" . $the_video . "\" allowfullscreen allowtransparency allow=\"autoplay\"></iframe>";
-        echo "</div></div>";
-    }
+	if ($the_video) {
+		echo "<div class=\"container\"><div class=\"plyr__video-embed\" id=\"player\">";
+		echo "<iframe src=\"" . $the_video . "\" allowfullscreen allowtransparency allow=\"autoplay\"></iframe>";
+		echo "</div></div>";
+	}
 }
 /* end of single product page customizations */
 //
@@ -93,19 +93,19 @@ remove_action('woocommerce_before_shop_loop_item_title', 'woocommerce_template_l
 add_action('woocommerce_after_shop_loop_item_title', 'rocks_poster_image', 10);
 function rocks_poster_image()
 {
-    global $product;
-    $quality = "hq"; // "maxres" or "hq"
-    if ($product && !$product->is_in_stock()) {
-        $poster = get_stylesheet_directory_uri() . "/assets/img/soldout-" . $quality . ".png";
-    } else if ($video_url = get_field('video', $product->get_id())) {
-        $id = parse_url($video_url, PHP_URL_PATH);
-        $poster = "https://i.ytimg.com/vi" . $id . "/" . $quality . "default.jpg";
-    } else {
-        $poster = get_stylesheet_directory_uri() . "/assets/img/placeholder-" . $quality . ".png";
-    }
-    echo "<div class=\"container\">";
-    echo "<img src=\"" . $poster . "\">";
-    echo "</div>";
+	global $product;
+	$quality = "hq"; // "maxres" or "hq"
+	if ($product && !$product->is_in_stock()) {
+		$poster = get_stylesheet_directory_uri() . "/assets/img/soldout-" . $quality . ".png";
+	} else if ($video_url = get_field('video', $product->get_id())) {
+		$id = parse_url($video_url, PHP_URL_PATH);
+		$poster = "https://i.ytimg.com/vi" . $id . "/" . $quality . "default.jpg";
+	} else {
+		$poster = get_stylesheet_directory_uri() . "/assets/img/placeholder-" . $quality . ".png";
+	}
+	echo "<div class=\"container\">";
+	echo "<img src=\"" . $poster . "\">";
+	echo "</div>";
 }
 /* end of shop/archive pages customizations */
 //
@@ -119,7 +119,7 @@ remove_action('woocommerce_before_subcategory_title', 'woocommerce_subcategory_t
 add_action('woocommerce_after_subcategory', 'rocks_add_short_description', 30);
 function rocks_add_short_description($category)
 {
-    $short_desc = get_term_meta($category->term_id, 'short_description', true);
-    echo '<span class="short-description">' . $short_desc . '</span>';
+	$short_desc = get_term_meta($category->term_id, 'short_description', true);
+	echo '<span class="short-description">' . $short_desc . '</span>';
 }
 /* end of category page customizations */

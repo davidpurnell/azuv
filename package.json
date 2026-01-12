@@ -1,0 +1,42 @@
+{
+  "name": "rocks",
+  "version": "1.0.0",
+  "description": "the website of Rocks",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidpurnell/aatom.git"
+  },
+  "main": "main.js",
+  "scripts": {
+    "build": "wp-scripts build",
+    "check-engines": "wp-scripts check-engines",
+    "check-licenses": "wp-scripts check-licenses",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "lint:md:docs": "wp-scripts lint-md-docs",
+    "lint:pkg-json": "wp-scripts lint-pkg-json",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start",
+    "test:e2e": "wp-scripts test-e2e",
+    "test:unit": "wp-scripts test-unit-js"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "keywords": [],
+  "author": "David Purnell <dave@purnell.io>",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/scripts": "^24.0.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.2",
+    "@fortawesome/free-solid-svg-icons": "^6.1.2",
+    "@vidstack/player": "^1.6.3",
+    "lit": "^2.3.1",
+    "plyr": "^3.7.2"
+  }
+}

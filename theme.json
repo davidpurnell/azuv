@@ -1,0 +1,274 @@
+{
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        {
+          "slug": "foreground",
+          "color": "#fafaf5",
+          "name": "Foreground"
+        },
+        {
+          "slug": "background",
+          "color": "#18344b",
+          "name": "Background"
+        },
+        {
+          "slug": "primary",
+          "color": "#39a9db",
+          "name": "Primary"
+        },
+        {
+          "slug": "secondary",
+          "color": "#f39237",
+          "name": "Secondary"
+        },
+        {
+          "slug": "tertiary",
+          "color": "#444140",
+          "name": "Tertiary"
+        },
+        {
+          "slug": "light-grey",
+          "color": "#999",
+          "name": "Lightest Grey"
+        },
+        {
+          "slug": "lightest-grey",
+          "color": "#f2f2f2",
+          "name": "Lightest Grey"
+        }
+      ]
+    },
+    "typography": {
+      "fontFamilies": [
+        {
+          "fontFamily": "\"Rubik Dirt\", sans-serif",
+          "name": "Rubik Dirt",
+          "slug": "rubik-dirt",
+          "fontFace": [
+            {
+              "fontFamily": "Rubik Dirt",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "src": ["file:./assets/fonts/rubik-dirt-v1-latin-regular.woff2"]
+            }
+          ]
+        },
+        {
+          "fontFamily": "\"Arya\", sans-serif",
+          "name": "Arya",
+          "slug": "arya",
+          "fontFace": [
+            {
+              "fontFamily": "Arya",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "src": ["file:./assets/fonts/arya-v19-latin-regular.woff2"]
+            },
+            {
+              "fontFamily": "Arya",
+              "fontWeight": "700",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "src": ["file:./assets/fonts/arya-v19-latin-700.woff2"]
+            }
+          ]
+        },
+        {
+          "fontFamily": "\"Rubik\", sans-serif",
+          "name": "Rubik",
+          "slug": "rubik",
+          "fontFace": [
+            {
+              "fontFamily": "Rubik",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "src": ["file:./assets/fonts/rubik-v21-latin-regular.woff2"]
+            },
+            {
+              "fontFamily": "Rubik",
+              "fontWeight": "700",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "src": ["file:./assets/fonts/rubik-v21-latin-700.woff2"]
+            }
+          ]
+        },
+        {
+          "fontFamily": "\"Woodford Bourne Thin\", sans-serif",
+          "name": "Woodford Bourne Thin",
+          "slug": "woodford-bourne-thin",
+          "fontFace": [
+            {
+              "fontFamily": "Woodford Bourne Thin",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "src": ["file:./assets/fonts/woodfordbourne-thin-webfont.woff2"]
+            }
+          ]
+        },
+        {
+          "fontFamily": "\"Woodford Bourne Regular\", sans-serif",
+          "name": "Woodford Bourne Regular",
+          "slug": "woodford-bourne-regular",
+          "fontFace": [
+            {
+              "fontFamily": "Woodford Bourne Regular",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "src": [
+                "file:./assets/fonts/woodfordbourne-regular-webfont.woff2"
+              ]
+            }
+          ]
+        },
+        {
+          "fontFamily": "\"Mulish\", sans-serif",
+          "name": "Mulish",
+          "slug": "mulish",
+          "fontFace": [
+            {
+              "fontFamily": "Mulish",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "src": ["file:./assets/fonts/mulish-v12-latin-regular.woff2"]
+            },
+            {
+              "fontFamily": "Mulish",
+              "fontWeight": "600",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "src": ["file:./assets/fonts/mulish-v12-latin-600.woff2"]
+            },
+            {
+              "fontFamily": "Mulish",
+              "fontWeight": "800",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "src": ["file:./assets/fonts/mulish-v12-latin-800.woff2"]
+            }
+          ]
+        },
+        {
+          "fontFamily": "\"Space Mono\", monospace",
+          "name": "Space Mono",
+          "slug": "space-mono",
+          "fontFace": [
+            {
+              "fontFamily": "Space Mono",
+              "fontWeight": "400",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "src": ["file:./assets/fonts/space-mono-v11-latin-regular.woff2"]
+            },
+            {
+              "fontFamily": "Space Mono",
+              "fontWeight": "700",
+              "fontStyle": "normal",
+              "fontStretch": "normal",
+              "src": ["file:./assets/fonts/space-mono-v11-latin-700.woff2"]
+            }
+          ]
+        }
+      ]
+    },
+    "layout": {
+      "contentSize": "800px",
+      "wideSize": "1200px"
+    }
+  },
+  "styles": {
+    "blocks": {
+      "core/post-title": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--rubik-dirt)",
+          "fontWeight": "400",
+          "letterSpacing": "3px",
+          "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
+          "fontSize": "var(--wp--custom--typography--font-size--gigantic)"
+        }
+      },
+      "core/query-title": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--rubik)",
+          "fontWeight": "400",
+          "lineHeight": "var(--wp--custom--typography--line-height--small)",
+          "fontSize": "var(--wp--custom--typography--font-size--gigantic)"
+        }
+      },
+      "core/site-title": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--rubik)",
+          "lineHeight": "var(--wp--custom--typography--line-height--normal)",
+          "fontSize": "var(--wp--preset--font-size--medium)",
+          "fontStyle": "italic",
+          "fontWeight": "normal"
+        }
+      }
+    },
+    "elements": {
+      "h1": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--rubik)",
+          "fontWeight": "400",
+          "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
+          "fontSize": "var(--wp--custom--typography--font-size--colossal)"
+        }
+      },
+      "h2": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--rubik)",
+          "fontWeight": "400",
+          "lineHeight": "var(--wp--custom--typography--line-height--small)",
+          "fontSize": "var(--wp--custom--typography--font-size--gigantic)"
+        }
+      },
+      "h3": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--rubik)",
+          "fontWeight": "400",
+          "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
+          "fontSize": "var(--wp--custom--typography--font-size--huge)"
+        }
+      },
+      "h4": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--rubik)",
+          "fontWeight": "400",
+          "lineHeight": "var(--wp--custom--typography--line-height--tiny)",
+          "fontSize": "var(--wp--preset--font-size--x-large)"
+        }
+      },
+      "h5": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--rubik)",
+          "fontWeight": "700",
+          "textTransform": "uppercase",
+          "lineHeight": "var(--wp--custom--typography--line-height--normal)",
+          "fontSize": "var(--wp--preset--font-size--medium)"
+        }
+      },
+      "h6": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--rubik)",
+          "fontWeight": "400",
+          "textTransform": "uppercase",
+          "lineHeight": "var(--wp--custom--typography--line-height--normal)",
+          "fontSize": "var(--wp--preset--font-size--medium)"
+        }
+      }
+    },
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--woodford-bourne-thin)",
+      "lineHeight": "var(--wp--custom--typography--line-height--normal)",
+      "fontSize": "var(--wp--preset--font-size--medium)"
+    }
+  }
+}

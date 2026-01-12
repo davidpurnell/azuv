@@ -1,0 +1,47 @@
+/* 
+ Theme Name:    Rocks (2022 Child)
+ Theme URI:     https://www.aatom.co 
+ Description:   2022 Child Theme for AZUV
+ Author:        Affable Atom
+ Author URI:    https://www.aatom.co 
+ Template:      twentytwentytwo 
+ Version:       1.0.0
+ Text Domain:   rocks
+*/
+
+/* ----------- CUSTOM CSS BELOW --------------------------- */
+
+@media (max-width: 990px) {
+  .woocommerce ul.products.columns-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .woocommerce ul.products.columns-3 li.product {
+    width: 48%;
+    margin-right: 0;
+    float: none;
+  }
+}
+@media (min-width: 1450px) {
+  .woocommerce ul.products.columns-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .woocommerce ul.products.columns-3 li.product {
+    width: 24%;
+    margin-right: 0;
+    float: none;
+  }
+}
+@media (min-width: 768px) {
+.front-page-glowing-rock {
+	margin-top: -100px !important;
+}
+
+.woocommerce-message, .woocommerce-info {
+	background-color: var(--wp--preset--color--tertiary) !important;
+}
